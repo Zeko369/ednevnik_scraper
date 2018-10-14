@@ -16,24 +16,17 @@ class google_calendar_ednevnik_thingy:
         creds = tools.run_flow(flow, store)
     self.service = build('calendar', 'v3', http=creds.authorize(Http()))
 
-    # SCOPES = 'https://www.googleapis.com/auth/calendar'
-    # store = file.Storage('credentials.json')
-    # flow = client.flow_from_clientsecrets('client_secret.json', SCOPES)
-    # creds = tools.run_flow(flow, store)
-    # self.service = build('calendar', 'v3', http=creds.authorize(Http()))
-
     self.scraper = scraper()
     self.month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
     return
 
   def run(self):
-    print('foo')
-    # self.scraper.scrape()
+    self.scraper.scrape()
 
-    # for test in self.scraper.out:
-    #   print('Inserting: ', test)
-    #   self.create_event(self.event(test))
+    for test in self.scraper.out:
+      print('Inserting: ', test)
+      self.create_event(self.event(test))
 
   def create_event(self, event):
     self.service.events().insert(calendarId='eeclo4qf24cgae8jtaph7mojc8@group.calendar.google.com', body=event).execute()
