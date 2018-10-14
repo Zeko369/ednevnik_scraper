@@ -1,8 +1,8 @@
 # ednevnik_scraper
 
 ## install
-gcal - `pip3 install --upgrade google-api-python-client oauth2client`
-bs4 - `pip3 install beautifulsoup4`
+gcal - `pip3 install --upgrade google-api-python-client oauth2client`  
+bs4 - `pip3 install beautifulsoup4`  
 
 ## config
 ### scraper
@@ -14,8 +14,8 @@ add your username and password to `cred.py`
 - change `calendarId` on line 32 in `gcal_test.py`
 
 ## run
-just scraping (returns json)
-`python3 login_test.py`
+just scraping (returns json)  
+`python3 login_test.py`  
 
-import to gcal
-`python3 gcal_test.py`
+import to gcal  
+`python3 gcal_test.py`  
