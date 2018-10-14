@@ -1,5 +1,10 @@
 # ednevnik_scraper
 
+## Licence
+Like really ? OPEN SOURCE  
+use it however you want to, if you build something cool let me know (PR or Issue)  
+Happy hacking 👨‍💻
+
 ## Install
 - `pip3 install --upgrade google-api-python-client oauth2client`  
 - `pip3 install beautifulsoup4`  
