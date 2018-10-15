@@ -7,7 +7,7 @@ class scraper(credentials):
   def __init__(self):
     super().__init__()
     self.LOGIN_URL = "https://ocjene.skole.hr/pocetna/posalji/"
-    self.URL = "https://ocjene.skole.hr/pregled/ispiti/2193825230"
+    self.URL = "https://ocjene.skole.hr/pregled/ispiti/"
 
   def scrape(self):
     self.get_page()
